@@ -16,7 +16,7 @@ echo "=========================================="
 source ~/miniconda3/etc/profile.d/conda.sh
 conda activate trocr
 
-cd ~/trocr-project
+cd ~/handwritten-text-recognition-trocr
 
 nvidia-smi
 
