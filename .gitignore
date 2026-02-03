@@ -1,8 +1,9 @@
+cat > .gitignore << 'EOF'
 # Data directories
 data/
 models/
 logs/
-checkpoints/
+results/
 
 # Image files
 *.png
@@ -17,24 +18,42 @@ checkpoints/
 *.pth
 *.bin
 *.safetensors
-
-# CSV files (optional - sometimes you want to track small metadata CSVs)
-*.csv
+*.ckpt
 
 # XML files (PageXML can be large)
 *.xml
 
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
+*.py[cod]
+*$py.class
 *.so
-*.egg
-*.egg-info/
-dist/
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
 
 # IDEs
 .vscode/
@@ -46,16 +65,23 @@ build/
 # OS
 .DS_Store
 Thumbs.db
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Environment
-venv/
-env/
-.env
+.directory
 
 # Logs
 *.log
 slurm-*.out
 slurm-*.err
+
+# Environment variables
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# CSV files (optional - uncomment if you want to track metadata)
+# *.csv
+EOF
