@@ -1,0 +1,61 @@
+# Data directories
+data/
+models/
+logs/
+checkpoints/
+
+# Image files
+*.png
+*.jpg
+*.jpeg
+*.tiff
+*.tif
+*.pdf
+
+# Model files
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# CSV files (optional - sometimes you want to track small metadata CSVs)
+*.csv
+
+# XML files (PageXML can be large)
+*.xml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+venv/
+env/
+.env
+
+# Logs
+*.log
+slurm-*.out
+slurm-*.err
