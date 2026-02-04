@@ -5,7 +5,6 @@
 #SBATCH --time=12:00:00
 #SBATCH --output=logs/slurm-%j.out
 #SBATCH --error=logs/slurm-%j.err
-#SBATCH --mem=16G
 
 echo "=========================================="
 echo "Job ID: $SLURM_JOB_ID"
