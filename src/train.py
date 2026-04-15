@@ -47,11 +47,13 @@ def main(args):
     model.config.pad_token_id = processor.tokenizer.pad_token_id
     model.config.vocab_size = model.config.decoder.vocab_size
     model.config.eos_token_id = processor.tokenizer.sep_token_id
-    model.config.max_length = args.max_length
-    model.config.early_stopping = True
-    model.config.no_repeat_ngram_size = 3
-    model.config.length_penalty = 2.0
-    model.config.num_beams = 4
+
+    # Generation settings
+    model.generation_config.max_length = args.max_length
+    model.generation_config.early_stopping = True
+    model.generation_config.no_repeat_ngram_size = 3
+    model.generation_config.length_penalty = 2.0
+    model.generation_config.num_beams = 4
     
     print("\nLoading datasets...")
     train_dataset = TrOCRDataset(
@@ -98,7 +100,6 @@ def main(args):
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=val_dataset,
-        tokenizer=processor.feature_extractor,
         data_collator=default_data_collator,
         compute_metrics=lambda pred: compute_metrics(pred, processor),
     )

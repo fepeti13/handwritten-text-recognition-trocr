@@ -26,25 +26,11 @@ python src/train.py \
     --images_dir data/processed/images \
     --output_dir models/base-hungarian \
     --num_epochs 10 \
-    --batch_size 4 \
-    --gradient_accumulation_steps 4 \
+    --batch_size 2 \
+    --gradient_accumulation_steps 8 \
     --learning_rate 5e-5 \
     --fp16
 
 echo "=========================================="
 echo "Finished: $(date)"
 echo "=========================================="
-```
-
----
-
-## **Step 3: Update requirements.txt**
-```
-torch>=2.0.0
-transformers>=4.30.0
-datasets>=2.14.0
-evaluate>=0.4.0
-pillow>=10.0.0
-pandas>=2.0.0
-scikit-learn>=1.3.0
-tqdm>=4.65.0

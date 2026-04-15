@@ -84,4 +84,7 @@ slurm-*.err
 
 # CSV files (optional - uncomment if you want to track metadata)
 # *.csv
+
+# Version marker files
+=*.?*.?*
 EOF
