@@ -128,7 +128,7 @@ if __name__ == "__main__":
     parser.add_argument("--val_csv", type=str, default="data/processed/val.csv")
     parser.add_argument("--images_dir", type=str, default="data/processed/images")
     parser.add_argument("--max_length", type=int, default=64)
-    parser.add_argument("--output_dir", type=str, default="models/base-hungarian")
+    parser.add_argument("--output_dir", type=str, default="models/base-hungarian-v2")
     parser.add_argument("--num_epochs", type=int, default=10)
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--gradient_accumulation_steps", type=int, default=4)

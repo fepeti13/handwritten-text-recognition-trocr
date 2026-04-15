@@ -3,7 +3,7 @@ Process ONE register: extract text lines from PageXML and crop images.
 Register ID comes from LAST number in folder name.
 """
 import xml.etree.ElementTree as ET
-from PIL import Image
+from PIL import Image, ImageOps
 import os
 import csv
 from pathlib import Path
@@ -103,7 +103,7 @@ def process_register(register_path, output_dir):
             continue
         
         try:
-            original_image = Image.open(image_path)
+            original_image = ImageOps.exif_transpose(Image.open(image_path))
         except Exception as e:
             print(f"Error loading {image_path}: {e}")
             continue

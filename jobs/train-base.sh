@@ -24,7 +24,7 @@ python src/train.py \
     --train_csv data/processed/train.csv \
     --val_csv data/processed/val.csv \
     --images_dir data/processed/images \
-    --output_dir models/base-hungarian \
+    --output_dir models/base-hungarian-v2 \
     --num_epochs 10 \
     --batch_size 2 \
     --gradient_accumulation_steps 8 \
